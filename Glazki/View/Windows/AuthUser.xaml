@@ -1,0 +1,91 @@
+﻿<Window x:Class="Glazki.View.Windows.AuthUser"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Glazki.View.Windows"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        MinHeight="460"
+        MinWidth="400"
+        Title="Авторизация" Height="460" Width="400"
+        FontFamily="{StaticResource FF}"
+        FontSize="16">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+            <RowDefinition Height="75"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal">
+            <Image Source="/Resources/Глазки.png"
+               HorizontalAlignment="Left"/>
+            <Label Content="Глазки"
+                   VerticalContentAlignment="Center"/>
+            <Label Content="Авторизация"
+                   FontSize="16"
+                   VerticalContentAlignment="Center"
+                   Margin="30 0 0 0"
+                   />
+            <Button Content="Выход"
+                    VerticalAlignment="Center"
+                    Margin="80 0 0 0"
+                    Background="{StaticResource DopColor}"
+                    x:Name="Exit"
+                    Click="Exit_Click"/>
+        </StackPanel>
+        <StackPanel Orientation="Vertical"
+                    Grid.Row="1"
+                    Margin="10"
+                    Background="{StaticResource DopColor}">
+            <TextBox
+                Text="Логин"
+                Margin="5"
+                x:Name="loginTBox"
+                GotFocus="loginTBox_GotFocus"
+                LostFocus="loginTBox_LostFocus"
+                />
+            <TextBox
+                Text="Пароль"
+                Margin="5"
+                x:Name="passwordTBox"
+                GotFocus="passwordTBox_GotFocus"
+                LostFocus="passwordTBox_LostFocus"/>
+            <TextBlock
+                Text="Тут капча"
+                Margin="5"
+                x:Name="CapthaNBlock"/>
+            <TextBox
+                Text="Тут ответ на капчу"
+                Margin="5"
+                x:Name="OtvetTBox"
+                GotFocus="OtvetTBox_GotFocus"
+                LostFocus="OtvetTBox_LostFocus"/>
+            <Button
+                Content="Обновить капчу"
+                x:Name="UpdateCapthaButton"
+                Margin="5"
+                Background="{x:Null}" Click="UpdateCapthaButton_Click"/>
+            <Button
+                Content="Проверить капчу"
+                x:Name="ProtectedCapthaButton"
+                Margin="5"
+                Background="{x:Null}" Click="ProtectedCapthaButton_Click"/>
+        </StackPanel>
+        <StackPanel Grid.Row="2"
+                    Orientation="Vertical"
+                    Margin="5">
+            <Button
+                Content="Войти в аккаунт"
+                Margin="5"
+                x:Name="EntryForAccButton"
+                Background="{StaticResource AccentColor}" Click="EntryForAccButton_Click"/>
+            <Button
+                Content="Войти не авторизовавшись"
+                Margin="5"
+                x:Name="EntryButton"
+                Background="{StaticResource AccentColor}" Click="EntryButton_Click"/>
+        </StackPanel>
+
+    </Grid>
+</Window>

@@ -1,0 +1,67 @@
+﻿<Window x:Class="Glazki.View.Windows.AddPercon"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Glazki.View.Windows"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        MinHeight="450"
+        MinWidth="400"
+        Title="Добавление изменение информации" Height="450" Width="400"
+        FontFamily="{StaticResource FF}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal">
+            <Image Source="/Resources/Глазки.png" />
+            <TextBlock Text="Добавление информации"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"/>
+            <Button Content="Назад"
+                    Background="{StaticResource DopColor}"
+                    Margin="130 0 0 0"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    x:Name="backForList" Click="backForList_Click"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1">
+            <TextBox
+                Text="ИНН"
+                Margin="5"
+                VerticalContentAlignment="Center"
+                />
+            <TextBox
+                Text="ИНН"
+                Margin="5"
+                VerticalContentAlignment="Center"
+                />
+            <TextBox
+                Text="ИНН"
+                Margin="5"
+                VerticalContentAlignment="Center"
+                />
+            <TextBox
+                Text="ИНН"
+                Margin="5"
+                VerticalContentAlignment="Center"
+                />
+            <TextBox
+                Text="ИНН"
+                Margin="5"
+                VerticalContentAlignment="Center"
+                />
+        </StackPanel>
+        <Button Grid.Row="2"
+                Content="Сохранить"
+                Margin="5"
+                Background="{StaticResource AccentColor}"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                x:Name="SaveInfo" Click="SaveInfo_Click"/>
+
+    </Grid>
+</Window>
